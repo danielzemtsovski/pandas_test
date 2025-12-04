@@ -33,7 +33,7 @@ def add_order_month(df: pd.DataFrame):
 def add_hige_value_order(df: pd.DataFrame):
     average = df["total_amount"].mean()
     df["hige_value_order"] = df["total_amount"] > average
-    df.sort_values("total_amount",ascending=False)
+    df = df.sort_values("total_amount",ascending=False)
     return df
 
 #level 6
